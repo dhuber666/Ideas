@@ -8,7 +8,179 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+html {
+  padding: 0;
+  margin: 0;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+/* Header */
+
+
+.header {
+  height: 100vh;
+  width: 100vw;
+  background: #DFE8FF;
+  
+}
+
+.header-title {
+  font-family: Crimson Text;
+  font-weight: bold;
+  font-size: 72px;
+  letter-spacing: 0.18em;
+  color: #000;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  margin-top: 20%;
+}
+
+.header-subtitle {
+  font-family: Roboto Slab;
+  font-size: 36px;
+  text-align: center;
+  color: #000;
+}
+
+.header-button {
+  width: 200px;
+  height: 53px;
+  background: #7CA0FF;
+  border: none;
+  border-radius: 8px;
+  color: #FFF;
+  font-family: Crimson Text;
+  font-weight: bold;
+  font-size: 22px;
+  margin: 40px auto;
+  display: block;
+  cursor: pointer;
+}
+
+.header-circle {
+  width: 94px;
+  height: 94px;
+  background: #FFF;
+  border-radius: 100%;
+  display: flex;
+  margin: 0 auto;
+  margin-top: 200px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.navbar {
+  display: flex;
+  width: 100%;
+  
+  flex-direction: row-reverse;
+
+
+}
+
+.navbar a {
+  padding: 20px;
+  margin-right: 50px;
+  font-family: Roboto Slab;
+  font-size: 14px;
+  letter-spacing: 0.18em;
+  color: #000;
+  text-decoration: none;
+}
+
+/* Header End */
+
+
+/* Ideas  */
+
+.ideas-container {
+  width: 100vw;
+  height: 100vh;
+  
+}
+
+.ideas-header {
+  font-family: 'Crimson Text';
+  font-weight: bold;
+  font-size: 24px;
+  color: #4A4F5F;
+  text-align: center;
+}
+
+.idea-item-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+
+.idea-item-container {
+  border: 2px solid #7CA0FF;
+  width: 90%;
+  margin: 0 auto;
+  border-radius: 14px;
+  margin-bottom: 10px;
+}
+
+.idea-item-container i {
+  cursor: pointer;
+  text-align: center;
+}
+
+
+
+.idea-title {
+  font-family: 'Roboto Slab';
+  font-size: 22px;
+  letter-spacing: 0.06em;
+}
+
+.idea-like-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.idea-item-container * {
+  flex-basis: 25%;
+}
+
+.idea-like-container * {
+  margin: 10px;
+}
+
+.idea-status {
+  /* gets conditionaly chosen - background: #DFE8FF; */
+  width: 44px;
+  height: 44px;
+  border-radius: 100%;
+  flex-basis: auto;
+  
+}
+
+.ideas-list {
+  width: 100%;
+}
+
+/* Ideas End */
+
+
+.add-icon-container {
+  margin-top: 20px;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
+}
+
+.add-icon-container p {
+  font-size: 18px;
+  font-weight: bold;
 }
