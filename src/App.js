@@ -1,16 +1,21 @@
 import React, { Component } from 'react';
-import Header from './components/Header';
-import Ideas from './components/Ideas';
+import NewIdea from './components/NewIdea';
+
+import Home from './components/Home';
+
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 class App extends Component {
 
-  
+
   render() {
     return (
-      <div className="App">
-        <Header />
-        <Ideas />
-      </div>
+      <Router>
+        <div>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/new" component={NewIdea} />
+        </div>
+      </Router>
     );
   }
 }
