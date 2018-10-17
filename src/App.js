@@ -14,36 +14,55 @@ class App extends Component {
         title: "Calculator Application",
         body: "a description",
         claimed: false,
-        likes: 3
+        likes: 3,
+        toggled: false
       },
       {
         id: 1,
         title: "Tic Tac Toe Game",
         body: "a description",
         claimed: true,
-        likes: 1
+        likes: 1,
+        toggled: false
       }
     ]
   }
 
   addNewIdea = (title, body) => {
-    const newIdea = { id: 2, title, body, claimed: false, likes: 0 }
+    const newIdea = { id: 2, title, body, claimed: false, likes: 0, toggled: false }
     this.setState({
       ideas: [...this.state.ideas, newIdea]
     })
   }
 
+  toggleIdea = (id) => {
+    const { ideas } = this.state;
+
+    const toggledIdeas = ideas.filter(idea => {
+
+      if (idea.id !== id) {
+        return idea;
+      } else {
+        idea.toggled = !idea.toggled
+        return idea
+      }
+    })
+
+    this.setState({
+      ideas: toggledIdeas
+    })
+  }
 
   render() {
     return (
       <Router>
         <div>
-          <Route exact path="/" render={(props) => <Home {...props} ideas={this.state.ideas} />} />
+          <Route exact path="/" render={(props) => <Home {...props} ideas={this.state.ideas} toggleIdea={this.toggleIdea} />} />
           <Route exact path="/new" render={(props) => <NewIdea {...props} addNewIdea={this.addNewIdea} />} />
           {/* Debugging button */}
           <button onClick={() => console.log(this.state)}>Show State</button>
         </div>
-      </Router>
+      </Router >
     );
   }
 }

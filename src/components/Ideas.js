@@ -7,7 +7,7 @@ export default class Ideas extends React.Component {
 
 
     renderIdeas = () => (
-        this.props.ideas.map(idea => <Idea key={idea.id} {...idea} />)
+        this.props.ideas.map(idea => <Idea key={idea.id} {...idea} {...this.props} />)
     )
 
 

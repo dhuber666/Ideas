@@ -284,3 +284,44 @@ code {
   margin-right: 10%;
   cursor: pointer;
 }
+
+.idea-item-container-toggled {
+  display: flex;
+  flex-direction: column;
+  
+  padding-top: 20px;
+  height: 600px;
+  border: 2px solid #7CA0FF;
+  width: 90%;
+  margin: 0 auto;
+  border-radius: 14px;
+  margin-bottom: 10px;
+}
+
+.idea-body {
+  text-align: justify;
+  font-size: 22px;
+  font-family: Roboto Slab;
+  padding: 20px;
+  
+
+}
+
+.idea-header-container {
+  /* width: 100%; */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.idea-toggle {
+  display: block;
+  align-self: flex-end;
+}
+
+hr {
+  width: 85%;
+  border: 1px solid #7CA0FF;
+  border-radius: 20px;
+  
+}
